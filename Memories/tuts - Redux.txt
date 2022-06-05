@@ -1,0 +1,7 @@
+In src : 
+--create 2 folders :
+	actions -> posts.js,
+	reducers -> posts.js, index.js
+
+
+-if folder contains index.js then you can import whole folder as module

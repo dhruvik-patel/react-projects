@@ -1,0 +1,68 @@
+api -> actions -> component(which use dispatch(actionMethod) ) -> reducers
+
+* api : create function that send/get data to url.
+
+* action : define functions which takes data from api call and return object with this data to reducers.
+
+* reducers : return data based on type of action.
+
+* In component : To use action you have to create object of useDispatch hook (const dispatch = useDispatch())
+
+
+----api------------------------------------------
+// define function that call api and returns response.data
+export const fetchPosts = () => axios.get(url)
+export const createPost = (newPost) => axios.post(url, newPost)
+
+
+
+
+----action------------------------------------------
+export const getPosts = () => async (dispatch) => {
+    try {
+        const { data } = await api.fetchPosts()
+        
+        dispatch({ type:'FETCH_ALL', payload: data })
+    } catch (error) {
+        console.log(error)
+    }
+} 
+
+export const createPost = (post) => async (dispatch) => {
+    try {
+        const {data} = await api.createPost(post)
+        dispatch({ type: 'CREATE', payload: data})
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+----reducers------------------------------------------
+// from actions, {type: '', payload:data} is returned
+const reducer = (posts = [], action) => {
+    switch (action.type) {
+        case 'FETCH_ALL':
+            return action.payload
+        case 'CREATE':
+            return [...posts, action.payload]
+        default:
+            return posts
+    }
+}
+
+
+
+----components------------------------------------------
+
+    const dispatch = useDispatch()
+
+    const [postData,setPostData] = useState({ creator:'', title:'', message:'', tags:'', selectedFile:'' })
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        dispatch(createPost(postData))
+    }
+
+
+

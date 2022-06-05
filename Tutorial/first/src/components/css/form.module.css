@@ -1,0 +1,12 @@
+.Formdiv{
+    padding: 10px;
+    margin: 10px;
+}
+
+.Formlabel{
+    margin-right: 5px;
+}
+
+.Formtextarea{
+    will-change: none;
+}

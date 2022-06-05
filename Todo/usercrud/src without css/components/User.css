@@ -1,0 +1,28 @@
+.user-all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.user-info-content{
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info-options {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
