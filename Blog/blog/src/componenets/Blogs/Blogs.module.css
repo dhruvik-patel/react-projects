@@ -1,0 +1,16 @@
+.Blogs{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Blogs div:first-child{
+    width:100%;
+}
+
+.Blogs div h2{
+    text-align: center;
+    margin: 32px 0;
+    color: #6b406e;
+}
