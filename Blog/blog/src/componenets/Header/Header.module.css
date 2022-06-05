@@ -1,0 +1,27 @@
+.Header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header nav ul{
+    display: flex;
+}
+
+.Header nav ul li{
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.Header nav ul li a{
+    text-decoration: none;
+    color: rgb(70, 150, 80);
+    font-size: 1.1rem;
+}
+
+.Header nav ul li a:hover,
+.Header nav ul li a:active{
+    color:#6b406e
+}
