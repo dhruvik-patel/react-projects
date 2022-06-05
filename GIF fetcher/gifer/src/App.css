@@ -1,0 +1,59 @@
+body {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='76' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.heading{
+    text-align: center;
+    color: rgb(59, 114, 197);
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btnDiv{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnDiv input{
+    margin-right: 10px;    
+}
+
+.btnDiv button{
+    background-color: rgb(70, 131, 201);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    height: 48px;
+    box-sizing: border-box;
+}
+
+.btnDiv button:hover{
+    background-color: white;
+    color: rgb(70, 131, 201);
+    border: 1px solid rgb(70, 131, 201);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px){
+    .randomMain img,
+    .taggedMain img{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .randomMain img,
+    .taggedMain img{
+        width: 290px;
+    }
+}
